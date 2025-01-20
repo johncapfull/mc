@@ -13,8 +13,14 @@
 Последний релизный тег, который был подсосан: `4.8.32`
 
 ## Подсос тегов из апстрима
-`git fetch --tags upstream`
+
+Например, мы хотим поднять jcdev до уровня релиза 4.8.32. Как сделать:
+```
+git fetch --tags upstream
+git checkout tags/4.8.32 -b release-4.8.32
+```
 
 Как был добавлен апстрим сюда (сделано ранее):
 `git remote add upstream git@github.com:MidnightCommander/mc.git`
+
 
