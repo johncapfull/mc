@@ -129,6 +129,7 @@ enum
     CK_QuitQuiet,
     /* C-x or similar */
     CK_ExtendedKeyMap,
+    CK_ToggleCommandPrompt,
 
     /* main commands */
     CK_EditForceInternal = 100L,

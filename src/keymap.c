@@ -210,7 +210,7 @@ static const global_keymap_ini_t default_panel_keymap[] = {
     {"Mark", "insert; ctrl-t"},
     {"MarkDown", "shift-down"},
     {"MarkUp", "shift-up"},
-    {"Up", "up; ctrl-p"},
+    {"Up", "up"},
     {"Down", "down; ctrl-n"},
     {"Left", "left"},
     {"Right", "right"},
@@ -250,7 +250,7 @@ static const global_keymap_ini_t default_menu_keymap[] = {
     {"Help", "f1"},
     {"Left", "left; ctrl-b"},
     {"Right", "right; ctrl-f"},
-    {"Up", "up; ctrl-p"},
+    {"Up", "up"},
     {"Down", "down; ctrl-n"},
     {"Home", "home; alt-lt; ctrl-a"},
     {"End", "end; alt-gt; ctrl-e"},
@@ -296,7 +296,7 @@ static const global_keymap_ini_t default_input_keymap[] = {
 
 /* listbox */
 static const global_keymap_ini_t default_listbox_keymap[] = {
-    {"Up", "up; ctrl-p"},
+    {"Up", "up"},
     {"Down", "down; ctrl-n"},
     {"Top", "home; alt-lt; a1"},
     {"Bottom", "end; alt-gt; c1"},
@@ -312,7 +312,7 @@ static const global_keymap_ini_t default_listbox_keymap[] = {
 
 /* radio */
 static const global_keymap_ini_t default_radio_keymap[] = {
-    {"Up", "up; ctrl-p"},
+    {"Up", "up"},
     {"Down", "down; ctrl-n"},
     {"Top", "home; alt-lt; a1"},
     {"Bottom", "end; alt-gt; c1"},
@@ -332,7 +332,7 @@ static const global_keymap_ini_t default_tree_keymap[] = {
     {"MakeDir", "f7"},
 #endif
     {"Delete", "f8; delete"},
-    {"Up", "up; ctrl-p"},
+    {"Up", "up"},
     {"Down", "down; ctrl-n"},
     {"Left", "left"},
     {"Right", "right"},
@@ -342,6 +342,7 @@ static const global_keymap_ini_t default_tree_keymap[] = {
     {"PageDown", "pgdn; ctrl-v"},
     {"Enter", "enter"},
     {"Search", "ctrl-s; alt-s"},
+    {"ToggleCommandPrompt", "ctrl-p"},
     {NULL, NULL}
 };
 
@@ -351,7 +352,7 @@ static const global_keymap_ini_t default_help_keymap[] = {
     {"Index", "f2; c"},
     {"Back", "f3; left; l"},
     {"Quit", "f10; esc"},
-    {"Up", "up; ctrl-p"},
+    {"Up", "up"},
     {"Down", "down; ctrl-n"},
     {"PageDown", "f; space; pgdn; ctrl-v"},
     {"PageUp", "b; pgup; alt-v; backspace"},
@@ -370,7 +371,7 @@ static const global_keymap_ini_t default_help_keymap[] = {
 #ifdef ENABLE_EXT2FS_ATTR
 /* chattr dialog */
 static const global_keymap_ini_t default_chattr_keymap[] = {
-    {"Up", "up; left; ctrl-p"},
+    {"Up", "up; left"},
     {"Down", "down; right; ctrl-n"},
     {"Top", "home; alt-lt; a1"},
     {"Bottom", "end; alt-gt; c1"},
@@ -510,7 +511,7 @@ static const global_keymap_ini_t default_viewer_keymap[] = {
     {"Right", "l; right"},
     {"LeftQuick", "ctrl-left"},
     {"RightQuick", "ctrl-right"},
-    {"Up", "k; y; insert; up; ctrl-p"},
+    {"Up", "k; y; insert; up"},
     {"Down", "j; e; delete; down; enter; ctrl-n"},
     {"PageDown", "f; space; pgdn; ctrl-v"},
     {"PageUp", "b; pgup; alt-v; backspace"},

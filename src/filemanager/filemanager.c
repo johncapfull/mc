@@ -1408,6 +1408,9 @@ midnight_execute_cmd (Widget *sender, long command)
     case CK_Cancel:
         /* don't close panels due to SIGINT */
         break;
+    case CK_ToggleCommandPrompt:
+        toggle_show_hidden ();
+        break;
     default:
         res = MSG_NOT_HANDLED;
     }
