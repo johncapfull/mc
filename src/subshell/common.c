@@ -542,6 +542,7 @@ synchronize (void)
     sigdelset (&old_mask, SIGCHLD);
 
     /* Wait until the subshell has stopped */
+    // TODO: Here we have a deadlock somehow -- jay
     while (subshell_alive && !subshell_stopped)
         sigsuspend (&old_mask);
 

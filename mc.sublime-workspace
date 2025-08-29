@@ -1,0 +1,756 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"nam",
+				"name_len"
+			],
+			[
+				"se",
+				"set"
+			],
+			[
+				"siz",
+				"size_t"
+			],
+			[
+				"cl",
+				"close"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"fna",
+				"fnamelen"
+			],
+			[
+				"fn",
+				"fname"
+			],
+			[
+				"BhPro",
+				"BhPropertyFont"
+			],
+			[
+				"BhProe",
+				"BhPropertyItem"
+			],
+			[
+				"uint",
+				"uint16"
+			],
+			[
+				"bh_widget_pro",
+				"bh_widget_property_next"
+			],
+			[
+				"pro",
+				"properties_count"
+			],
+			[
+				"cur",
+				"current_index"
+			],
+			[
+				"ite",
+				"items_count"
+			],
+			[
+				"BhWid",
+				"BhWidgetId"
+			],
+			[
+				"wid",
+				"widget"
+			],
+			[
+				"size",
+				"size_t"
+			],
+			[
+				"sizet",
+				"size_t"
+			],
+			[
+				"wi",
+				"widget"
+			],
+			[
+				"ptr",
+				"ptrdiff_t"
+			],
+			[
+				"mi_midi",
+				"mi_midi_message.h\""
+			],
+			[
+				"mi_mi",
+				"mi_midi_message.h\""
+			],
+			[
+				"mi_midi_pa",
+				"mi_midi_parser.h\""
+			],
+			[
+				"mi_mid",
+				"mi_midi_message.h\""
+			],
+			[
+				"str",
+				"string.h"
+			],
+			[
+				"gre",
+				"greetlen"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"ini",
+				"initCanvas"
+			],
+			[
+				"init",
+				"initDivider"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"pa",
+				"panel"
+			],
+			[
+				"hand",
+				"handleResponse"
+			],
+			[
+				"thre",
+				"threading"
+			],
+			[
+				"con",
+				"contains"
+			],
+			[
+				"to",
+				"tobytes"
+			],
+			[
+				"re",
+				"redirectUrl"
+			],
+			[
+				"ipho",
+				"iphoneos"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "# jcmc\n\n## Как собрать\n\nПроект mc.sublime-project, сконфигурирован вместе с clangd.\n\n```\n./autogen.sh\n./configure --disable-silent-rules --without-x --with-screen=slang --enable-vfs-sftp\nmake\n\n# --> Соберет в ./src/mc\n```\n\n\n## Фичи\n\n- Тоггл коммандлайна [progress] \n\nНе делаем:\n- Xcode project -> deprecated, переехали в саблайм + clangd\n\n## Где установлен в homebrew?\n\n```\n/opt/homebrew/Cellar/midnight-commander/4.8.33\n```\n\nФормула:\nhttps://github.com/Homebrew/homebrew-core/blob/b7f2319966f1b601c21fcd7b9b412f8cf25593f3/Formula/m/midnight-commander.rb\n\n## Что это за бранч и репо?\n\nЭто мой личный форк репозитория mc из `https://github.com/johncapfull/mc/tree/master`\nРабочий бранч: jcdev\n\nВ него я периодически руками подсасываю апстрим по релизным тегам\nПоследний релизный тег, который был подсосан: `4.8.32`\n\n## Как делал конфиг clangd\n```\nbrew install bear\nbear -- make\n\n# --> появился файл compile_commands.json\n```\n\n## Подсос тегов из апстрима\n\n\nНапример, мы хотим поднять jcdev до уровня релиза 4.8.33. Как сделать:\n```\ngit fetch --tags upstream\ngit checkout tags/4.8.33 -b release-4.8.32\n\n# git checkout tags/4.8.32 -b release-4.8.32\n\n```\n\n\n\n\nКак был добавлен апстрим сюда (сделано ранее):\n`git remote add upstream git@github.com:MidnightCommander/mc.git`\n\n\n",
+			"settings":
+			{
+				"buffer_size": 1269,
+				"line_ending": "Unix",
+				"name": "# jcmc"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"paste",
+					null,
+					"AQAAAAAAAAAAAAAA9QQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"project",
+				"Project: Edit Project"
+			],
+			[
+				"list p",
+				"Package Control: List Packages"
+			],
+			[
+				"case ",
+				"Convert Case: snake_case"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"insp",
+				"Package Control: Install Package"
+			],
+			[
+				"list pac",
+				"Package Control: List Packages"
+			],
+			[
+				"upgra",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Debugger: Install adapters",
+				"Debugger: Install Adapters"
+			],
+			[
+				"l",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"lsp",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"ass",
+				"Ass: Open Chat in Tab"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: lis",
+				"Package Control: List Packages"
+			],
+			[
+				"bindi",
+				"Preferences: Key Bindings"
+			],
+			[
+				"tab",
+				"Ass: Open Chat in Tab"
+			],
+			[
+				"mess",
+				"Ass: Message"
+			],
+			[
+				"messa",
+				"Ass: Message"
+			],
+			[
+				"aass",
+				"Ass: Select Assistant"
+			],
+			[
+				"new",
+				"Ass: New Message"
+			],
+			[
+				"ope",
+				"OpenAI: Open in Tab"
+			],
+			[
+				"new mess",
+				"OpenAI: New Message"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"remove pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"ai",
+				"OpenAI: New Message"
+			],
+			[
+				"me",
+				"OpenAI: New Message"
+			],
+			[
+				"mes",
+				"OpenAI: New Message"
+			],
+			[
+				"open",
+				"OpenAI: New Message"
+			],
+			[
+				"opa",
+				"OpenAI: New Message"
+			],
+			[
+				"origa",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"a",
+				"Arithmetic"
+			],
+			[
+				"ai ne",
+				"OpenAI: New Message"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: l",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"open in finder",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"prett",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"f",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"forma",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format JSON"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 284.0,
+		"history":
+		[
+			"dbg.stdbg_hello1()",
+			"dbg.stdbg_hello()",
+			"dbg = ctypes.CDLL(\"/Users/ev.shapovalov/src/my/stdbg/stdbg/build/libstdbg.dylib\")",
+			"import lldb",
+			"window.project_file_name()",
+			"sys.path",
+			"import sys;",
+			"bin(1048576)",
+			"bin(9437448)",
+			"bin(1048576)",
+			"hex(1048576)",
+			"hex(0b11111110000000000000000)",
+			"bin(8388608)",
+			"bin(9437184)",
+			"hex(0b111111110000000000000000)",
+			"0b111111110000000000000000",
+			"bin(9437184)",
+			"hex(97)",
+			"hex(1<<16)",
+			"1<<16",
+			"sys.path",
+			"sys.version",
+			"import sys",
+			"2654*3.13",
+			"2654*3.1",
+			"clear",
+			"view.run_command(\"example\")"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/ev.shapovalov/src/my/mc",
+		"/Users/ev.shapovalov/src/my/mc/src",
+		"/Users/ev.shapovalov/src/my/mc/src/subshell"
+	],
+	"file_history":
+	[
+		"/Users/ev.shapovalov/src/my/mc/jmc.md",
+		"/Users/ev.shapovalov/src/my/mc/readme.md",
+		"/Users/ev.shapovalov/src/1/Mariana.sublime-color-scheme",
+		"/Users/ev.shapovalov/src/my/mc/maint/templates/template.c",
+		"/Users/ev.shapovalov/src/3rd/quelsollaar/t_pack.c",
+		"/Users/ev.shapovalov/src/3rd/quelsollaar/testify.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/btnhelper.md",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/bhgui/bhgui.md",
+		"/Users/ev.shapovalov/src/3rd/raddebugger/src/texture_cache/texture_cache.c",
+		"/Users/ev.shapovalov/src/3rd/raddebugger/src/texture_cache/texture_cache.h",
+		"/Users/ev.shapovalov/notes/work/work-notes",
+		"/Users/ev.shapovalov/src/3rd/raddebugger/src/text_cache/text_cache.h",
+		"/Users/ev.shapovalov/src/3rd/raddebugger/src/text_cache/text_cache.c",
+		"/Users/ev.shapovalov/src/3rd/raddebugger/src/render/render_core.c",
+		"/Users/ev.shapovalov/src/3rd/cpython/Include/internal/pycore_pyarena.h",
+		"/Users/ev.shapovalov/src/3rd/quelsollaar/betray_plugin_anaglyph.c",
+		"/Users/ev.shapovalov/src/3rd/quelsollaar/assemble_json.h",
+		"/Users/ev.shapovalov/src/3rd/seafile/daemon/repo-mgr.c",
+		"/Users/ev.shapovalov/src/3rd/seafile/daemon/c_bpwrapper.cpp",
+		"/Users/ev.shapovalov/src/3rd/quiche-build/quiche/src/lib.rs",
+		"/Users/ev.shapovalov/src/3rd/quelsollaar/b_android_native_app_glue.c",
+		"/Users/ev.shapovalov/notes/rec-backup-gpg.sh",
+		"/Users/ev.shapovalov/notes/recordings-backup-gpg.sg",
+		"/Users/ev.shapovalov/notes/work-backup-gpg.sh",
+		"/Users/ev.shapovalov/notes/jcob-backup-gpg.sh",
+		"/Users/ev.shapovalov/notes/work-backup.sh",
+		"/Users/ev.shapovalov/notes/jcob-backup.sh",
+		"/Users/ev.shapovalov/src/my/cage/cage",
+		"/Users/ev.shapovalov/src/my/cage/encage",
+		"/Users/ev.shapovalov/src/my/cage/cageenc.sh",
+		"/Users/ev.shapovalov/src/my/jaybox/readme.md",
+		"/Users/ev.shapovalov/src/my/jaybox/enctest.sh",
+		"/Users/ev.shapovalov/src/my/jaybox/me.pub",
+		"/Users/ev.shapovalov/src/my/jaybox/me.key",
+		"/Users/ev.shapovalov/1-whisper/ru-large.txt",
+		"/Users/ev.shapovalov/Pictures/secretary-bird-fococlipping-standard.png",
+		"/Users/ev.shapovalov/Library/CloudStorage/SeaDrive-jay(nas.btnhub.com)/My Libraries/nda/temp-nodel/me-photo.jpg",
+		"/Users/ev.shapovalov/Library/CloudStorage/SeaDrive-jay(nas.btnhub.com)/My Libraries/nda/temp-nodel/jbl305-sonarworks.png",
+		"/Users/ev.shapovalov/Library/CloudStorage/SeaDrive-jay(nas.btnhub.com)/My Libraries/nda/temp-nodel/IMG_8168.jpg",
+		"/Users/ev.shapovalov/Library/CloudStorage/SeaDrive-jay(nas.btnhub.com)/My Libraries/backup/notes/notes-backup.sh",
+		"/Users/ev.shapovalov/notes/jcob/.obsidian/snippets/jcob.css",
+		"/Users/ev.shapovalov/nas/seafile-ui.css",
+		"/Users/ev.shapovalov/Downloads/seafile-darj",
+		"/Users/ev.shapovalov/src/2nd/obsidian-dataview/build.sh",
+		"/Users/ev.shapovalov/src/my/jctm/static/bh.js",
+		"/Users/ev.shapovalov/src/td/config.json",
+		"/Users/ev.shapovalov/src/my/beam/beamjuce/src/graphics/renderer_impl.cpp",
+		"/Users/ev.shapovalov/src/my/beam/beamjuce/src/graphics/renderer_impl.h",
+		"/Users/ev.shapovalov/src/my/beam/beamjuce/src/graphics/renderer.h",
+		"/Users/ev.shapovalov/src/3rd/quelsollaar/t_network.c",
+		"/Users/ev.shapovalov/src/3rd/quelsollaar/t_main.c",
+		"/Users/ev.shapovalov/src/3rd/valgrind/coregrind/m_main.c",
+		"/Users/ev.shapovalov/src/3rd/valgrind/helgrind/hg_main.c",
+		"/Users/ev.shapovalov/src/3rd/valgrind/helgrind/hg_basics.h",
+		"/Users/ev.shapovalov/src/3rd/valgrind/callgrind/callstack.c",
+		"/Users/ev.shapovalov/notes/work/work.sublime-project",
+		"/Users/ev.shapovalov/src/my/btnhelper/tools/parallel-read/parallel_read.c",
+		"/Users/ev.shapovalov/src/my/btnhelper/tools/parallel-read/runtest.sh",
+		"/Users/ev.shapovalov/notes/work/work-plan",
+		"/Users/ev.shapovalov/notes/work/vk-perf-vkui/vk-perf-vkui",
+		"/Users/ev.shapovalov/src/2-parallel-read/parallel_read.c",
+		"/Users/ev.shapovalov/src/3rd/quelsollaar/assemble_json.c",
+		"/Users/ev.shapovalov/src/2-parallel-read/runtest.sh",
+		"/Applications/Xcode16r4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h",
+		"/Applications/Xcode16r4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h",
+		"/Users/ev.shapovalov/src/2-parallel-read/build.sh",
+		"/Users/ev.shapovalov/src/vk2/VKClient/VKClient/Store/BL/StoreStockOneTimePaymentAction.m",
+		"/Users/ev.shapovalov/src/my/ass/ass.md",
+		"/Users/ev.shapovalov/src/my/ass/update-from-upstream.md",
+		"/Users/ev.shapovalov/src/my/btnhelper/readme.md",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/bhgui/readme.md",
+		"/Users/ev.shapovalov/notes/work/music/pending-deep.txt",
+		"/Users/ev.shapovalov/src/vk2/VKClient/VKClient/Store/BL/StoreStockManagerV2.m",
+		"/Users/ev.shapovalov/src/3rd/godot/scene/gui/box_container.cpp",
+		"/Users/ev.shapovalov/notes/rsrch/vk-perf-vkui/vk-perf-vkui",
+		"/Users/ev.shapovalov/notes/work/pending-deep.txt",
+		"/Users/ev.shapovalov/madrun/tasks/0150-13aug2025-1921-uiso1-s18-5/0150-13aug2025-1921-uiso1-s18-5-build.log",
+		"/Users/ev.shapovalov/madrun/tasks/0148-13aug2025-1832-uiso1-s18-5/0148-13aug2025-1832-uiso1-s18-5-build.log",
+		"/Users/ev.shapovalov/madrun/tasks/0149-13aug2025-1911-uiso1-s18-5/0149-13aug2025-1911-uiso1-s18-5-build-nice.log",
+		"/Users/ev.shapovalov/madrun/tasks/0149-13aug2025-1911-uiso1-s18-5/0149-13aug2025-1911-uiso1-s18-5-build.log",
+		"/Users/ev.shapovalov/madrun/tasks/0148-13aug2025-1832-uiso1-s18-5/0148-13aug2025-1832-uiso1-s18-5-build-nice.log",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/bhgui/bh_gui.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/bhgui/bh_gui.c",
+		"/Users/ev.shapovalov/src/my/ess/readme.md",
+		"/Users/ev.shapovalov/src/3rd/ardour/libs/hidapi/hidapi/hidapi.h",
+		"/Users/ev.shapovalov/Library/CloudStorage/Dropbox/distrib/Audio/[$] Sonnox Soften/readme.md",
+		"/Users/ev.shapovalov/madrun/config/jay.local.json",
+		"/Users/ev.shapovalov/.zshrc",
+		"/Users/ev.shapovalov/.zprofile",
+		"/Users/ev.shapovalov/src/vk1/Performance/Performance.xcodeproj/project.pbxproj",
+		"/Users/ev.shapovalov/src/vk1/Performance/Performance/Telemetry/LaunchPerformanceTelemetry.swift",
+		"/Users/ev.shapovalov/src/vk1/Performance/Performance/Stats/LaunchTestNotifier.swift",
+		"/Users/ev.shapovalov/notes/rsrch/vk-onetime-pay",
+		"/Users/ev.shapovalov/notes/work/jaydash.md",
+		"/Users/ev.shapovalov/notes/rsrch/bh-wifi-scan/wifi-scan-pass.md",
+		"/Volumes/S64/Tracks/readme.md",
+		"/Users/ev.shapovalov/src/2/reff.py",
+		"/Users/ev.shapovalov/src/2/reff.sh",
+		"/Users/ev.shapovalov/src/my/btnhelper/renamer/all.txt",
+		"/Users/ev.shapovalov/src/my/btnhelper/renamer/mi_midi_message.txt",
+		"/var/folders/wx/74m7_hl15kn5460rp207z2f00000gp/T/mc-KNB1A3/mcusrU0FUA3",
+		"/Users/ev.shapovalov/src/my/btnhelper/renamer/funcc.py",
+		"/Users/ev.shapovalov/src/my/btnhelper/renamer/mi_midi_message.h",
+		"/Users/ev.shapovalov/src/22/rename_functions.sh",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_notes.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_message.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_packers.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi.c",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_message.c",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mt_midi_packers.c",
+		"/Users/ev.shapovalov/src/3rd/DelugeFirmware/src/deluge/model/output.cpp",
+		"/Users/ev.shapovalov/src/3rd/midimessage/src/midimessage.cpp",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_writer.c",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_writer.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_stringifier.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_stringifier.c",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_simple_parser.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_simple_parser.c",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_parser.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_parser.c",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_manufacturer_ids.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_dls_chunk_ids.h",
+		"/Users/ev.shapovalov/src/3rd/midimessage/include/midimessage/commonccs.h",
+		"/Users/ev.shapovalov/src/my/btnhelper/src/mimi/mi_midi_message.cpp",
+		"/Users/ev.shapovalov/src/3rd/midimessage/include/midimessage/simpleparser.h",
+		"/Users/ev.shapovalov/src/3rd/midimessage/src/simpleparser.cpp",
+		"/Users/ev.shapovalov/src/3rd/DelugeFirmware/src/deluge/model/positionable.h"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 116.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"markup.heading",
+			"subshell_stopped"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1269,
+								1269
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								}
+							],
+							"auto_name": "# jcmc",
+							"default_dir": "/Users/ev.shapovalov/src/my/mc",
+							"lsp_uri": "buffer:507",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 346.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.AI Chat":
+	{
+		"height": 672.0,
+		"history":
+		[
+		]
+	},
+	"output.LSP Log Panel":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "",
+	"project": "mc.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Library/Application Support/halloy/config.toml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 381.0
+	},
+	"select_symbol":
+	{
+		"height": 167.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"lsp_show_inlay_hints": false
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 228.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
