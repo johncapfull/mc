@@ -1,29 +1,49 @@
 # jmc
 
-Текущий бранч: release-4.8.33
-Рабочий бранч: jcdev (пока не используется?)
 Это мой личный форк репозитория mc из `https://github.com/johncapfull/mc/tree/master`
 
-
-## Как собрать
+Рабочий бранч: jcm (раньше был jcdev)
+Последний релизный тег: tags/4.8.33
 
 Проект mc.sublime-project, сконфигурирован вместе с clangd.
 
+> Статус: собран и используется
+
+## Как собрать
+
+
 ```
 ./autogen.sh
-./configure --disable-silent-rules --without-x --with-screen=slang --enable-vfs-sftp
+
+./configure --disable-silent-rules --without-x --with-screen=slang --enable-vfs-sftp --prefix=/opt/homebrew/Cellar/midnight-commander/4.8.33 --libdir=/opt/homebrew/Cellar/midnight-commander/4.8.33/lib
+
+# опционально --disable-debug
+
 make
 
 # --> Соберет в ./src/mc
+
+# Подменяем нашим mc хоумбрющный
+cp -rf ./src/mc /opt/homebrew/Cellar/midnight-commander/4.8.33/libexec/bin
+
+
+# Как понять и найти инфу с чем собирали
+./mc --configure-options
 ```
+
+
+Где скины:
+/opt/homebrew/Cellar/midnight-commander/4.8.33/share/mc/skins
 
 
 ## Фичи
 
-- Тоггл коммандлайна [progress] 
-
-Не делаем:
-- Xcode project -> deprecated, переехали в саблайм + clangd
+- Тоггл коммандлайна [in progress] 
+- Find: сделать строку поиска контента под строкой имени файла, а не справа
+- Клик третьей копкой мыши переходит по текущему выбранному, чтобы колесиком навигироваться
+- CopyToClipboard в редакторе по alt+c, который забинжен на cmd+c в iterm
+- +Выпилен `use_persistent_buffer`, чтобы не висло (все равно общий буфер для cmdbar / ctrl+o не работает)
+- +Xcode project (delme) -> deprecated, переехали в саблайм + clangd.
 
 ## Где установлен в homebrew?
 
@@ -59,8 +79,6 @@ git checkout tags/4.8.33 -b release-4.8.33
 # git checkout tags/4.8.32 -b release-4.8.32
 
 ```
-
-
 
 
 Как был добавлен апстрим сюда (сделано ранее):

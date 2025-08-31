@@ -48,3 +48,9 @@ make.tcc
 tests/src/editor/test-data.txt
 tests/src/vfs/extfs/helpers-list/data/config.sh
 mc-version.h
+
+.DS_Store
+misc/mc.ext.ini
+src/vfs/extfs/helpers/torrent
+src/vfs/extfs/helpers/uc1541
+tests/lib/vfs/mc.charsets

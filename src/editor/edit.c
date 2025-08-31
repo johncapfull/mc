@@ -44,6 +44,7 @@
 
 #include "lib/global.h"
 
+#include "lib/keybind.h"
 #include "lib/tty/color.h"
 #include "lib/tty/tty.h"        /* attrset() */
 #include "lib/tty/key.h"        /* is_idle() */
@@ -4044,6 +4045,11 @@ edit_execute_cmd (WEdit *edit, long command, int char_for_insertion)
         break;
     case CK_RepeatStartStopRecord:
         edit_begin_end_repeat_cmd (edit);
+        break;
+    case CK_CopyToClipboard:
+        edit_block_copy_clipboard_cmd (edit);
+        break;
+
         break;
     case CK_ExtendedKeyMap:
         WIDGET (edit)->ext_mode = TRUE;

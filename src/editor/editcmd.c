@@ -44,6 +44,8 @@
 #include <sys/stat.h>
 #include <stdlib.h>
 
+#include <sys/wait.h>
+
 #include "lib/global.h"
 #include "lib/tty/tty.h"
 #include "lib/tty/key.h"        /* XCTRL */
@@ -69,6 +71,7 @@
 #include "editwidget.h"
 #include "editsearch.h"
 #include "etags.h"
+
 
 /*** global variables ****************************************************************************/
 
@@ -1321,6 +1324,70 @@ edit_block_copy_cmd (WEdit *edit)
         edit_set_markers (edit, start_mark, end_mark + end_mark - start_mark, 0, 0);
 
     edit->force |= REDRAW_PAGE;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+// Копируем в маковский буфер обмена
+
+static void exec_and_pass_stdin(const char *command, const char *input) {
+    int pipefd[2];
+    pid_t pid;
+
+    if (pipe(pipefd) == -1) {
+        perror("pipe");
+        exit(1);
+    }
+
+    pid = fork();
+    if (pid == -1) {
+        perror("fork");
+        exit(1);
+    }
+
+    if (pid == 0) {
+        // Child process
+        char * const argv[] = {(char * const)command, NULL};
+
+        close(pipefd[1]);         // Close write end
+        dup2(pipefd[0], STDIN_FILENO); // Redirect stdin to read end of pipe
+        close(pipefd[0]);         // Close original fd
+
+        // Execute a command that reads from stdin
+        execv(command, argv);
+
+        perror("execv failed");
+        _exit(1);
+    } else {
+        int status = 0;
+
+        // Parent process
+        close(pipefd[0]); // Close read end
+
+        write(pipefd[1], input, strlen(input)); // Write string to child stdin
+        close(pipefd[1]); // Important: close to signal EOF
+
+        waitpid(pid, &status, 0);
+        //printf("Child exited with status %d\n", status);
+        (void)status;
+    }
+}
+
+void
+edit_block_copy_clipboard_cmd (WEdit *edit)
+{
+    off_t start_mark, end_mark;
+    off_t size;
+    unsigned char *copy_buf;
+
+    edit_update_curs_col (edit);
+    if (!eval_marks (edit, &start_mark, &end_mark))
+        return;
+
+    copy_buf = edit_get_block (edit, start_mark, end_mark, &size);
+
+    exec_and_pass_stdin("/usr/bin/pbcopy", (const char *)copy_buf);
+
+    g_free (copy_buf);
 }
 
 

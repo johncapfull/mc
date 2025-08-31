@@ -150,6 +150,7 @@ static name_keymap_t command_names[] = {
     ADD_KEYMAP_NAME (Bookmark),
     ADD_KEYMAP_NAME (Quit),
     ADD_KEYMAP_NAME (QuitQuiet),
+    ADD_KEYMAP_NAME (CopyToClipboard),
     ADD_KEYMAP_NAME (ExtendedKeyMap),
 
     /* main commands */

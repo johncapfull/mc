@@ -139,6 +139,7 @@ gboolean edit_reload_line (WEdit * edit, const edit_arg_t * arg);
 void edit_set_codeset (WEdit * edit);
 
 void edit_block_copy_cmd (WEdit * edit);
+void edit_block_copy_clipboard_cmd (WEdit * edit);
 void edit_block_move_cmd (WEdit * edit);
 gboolean edit_block_delete_cmd (WEdit * edit);
 void edit_delete_line (WEdit * edit);

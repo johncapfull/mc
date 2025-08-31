@@ -928,6 +928,7 @@ feed_subshell (int how, gboolean fail_on_error)
                         if (subshell_ready && !read_command_line_buffer (FALSE))
                         {
                             /* If we got here, some unforeseen error must have occurred. */
+                            // И виснем тут на старте в районе feed_subshell
                             if (mc_global.shell->type != SHELL_FISH)
                             {
                                 write_all (mc_global.tty.subshell_pty, "\003", 1);
@@ -1602,7 +1603,7 @@ init_subshell (void)
         if (mc_global.mc_run_mode == MC_RUN_FULL &&
             (mc_global.shell->type == SHELL_BASH || mc_global.shell->type == SHELL_ZSH
              || mc_global.shell->type == SHELL_FISH))
-            use_persistent_buffer = TRUE;
+            use_persistent_buffer = FALSE; // Вырублено чтобы не висло на старте. Было TRUE
         if (use_persistent_buffer && pipe (command_buffer_pipe) != 0)
         {
             perror (__FILE__ ": couldn't create pipe");

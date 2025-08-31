@@ -2,7 +2,9 @@
 	"folders":
 	[
 		{
-			"path": "."
+			"path": ".",
+            "file_include_patterns": ["*.c", "*.h", "*.md"],
+            "folder_exclude_patterns": [".*"]
 		}
 	]
 }
